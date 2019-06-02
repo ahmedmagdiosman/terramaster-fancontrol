@@ -18,7 +18,17 @@ Original author: https://xpenology.com/forum/topic/14007-terramaster-f4-220-fan-
 
 ``docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc gcc -o fancontrol fancontrol.cpp``
 
-3. Run the compiled program (command descriptions in the author's thread)
+
+3. Create a directory containing all the drives. I created a directory in ``/run/disks/``  and just empty files inside (as root):
+```
+mkdir /run/disks
+cd /run/disks
+touch sda sdb sdc
+```
+
+This far from perfect and if you're a Linux wizard you probably can do something better with regex, e.g.  ``/dev/sd*[a-z]``
+
+4. Run the compiled program (command descriptions in the author's thread)
 
 ``sudo ./fancontrol 1 40 ``
 
