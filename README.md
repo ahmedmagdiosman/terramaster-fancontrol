@@ -1,9 +1,9 @@
-#Fan control for TerraMaster on Linux 
+# Fan control for TerraMaster on Linux 
 
 Tested with F4-220.
 Original author: https://xpenology.com/forum/topic/14007-terramaster-f4-220-fan-control/?ct=1559481439
 
-##Installation:
+## Installation:
 1. Clone the repo
 ``git clone https://github.com/ahmedmagdiosman/terramaster-fancontrol.git``
 
