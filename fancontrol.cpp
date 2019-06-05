@@ -87,9 +87,9 @@ int main(int argc, char * argv[]) {
   case 5:
     interval = atoi(argv[4]);
   case 4:
-    setpoint = atoi(argv[3]);
+    pwminit = atoi(argv[3]);
   case 3:
-    pwminit = atoi(argv[2]);
+    setpoint = atoi(argv[2]);
   case 2:
     if (strncmp(argv[1], "-h", 3) == 0) {
       printf("Usage:\n"
