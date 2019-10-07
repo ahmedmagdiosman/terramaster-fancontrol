@@ -48,7 +48,7 @@ const static int pwmmax = 255; // Max PWM value, do not change
 const static uint8_t port = 0x2e;
 const static uint8_t fanspeed = 200;
 static uint16_t ecbar = 0x00;
-const static char * synostoragedir = "/run/disks";
+const static char * synostoragedir = "/opt/disks";
 
 void iowrite(uint8_t reg, uint8_t val) {
   outb(reg, port);
