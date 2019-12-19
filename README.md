@@ -19,19 +19,24 @@ Original author: https://xpenology.com/forum/topic/14007-terramaster-f4-220-fan-
 ``docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc gcc -o fancontrol fancontrol.cpp``
 
 
-3. Create a directory containing all the drives. I created a directory in ``/run/disks/``  and just empty files inside (as root):
+3. Create a directory containing all the drives. I created a directory in ``/opt/disks/``  and just empty files inside (as root):
 ```
-mkdir /run/disks
+mkdir /opt/disks
 cd /run/disks
 touch sda sdb sdc
 ```
 
 This far from perfect and if you're a Linux wizard you probably can do something better with regex, e.g.  ``/dev/sd*[a-z]``
 
-4. Run the compiled program (command descriptions in the author's thread)
+4. Run the compiled program (command descriptions in the author's thread).
 
 ``sudo ./fancontrol 1 40 ``
 
-This will run it in debug mode (1) with temperature setpoint= 40c
+This will run it in debug mode (1) with temperature setpoint= 40c. Make sure run with fancontrol with sudo.
 
-Make sure run with fancontrol with sudo.
+5. Alternatively you can use the included systemd service. Copy it to `/etc/systemd/system`. Also, copy the binary to `/usr/local/bin/fancontrol`.
+
+```
+sudo systemctl start fancontrol.service
+sudo systemctl enable fancontrol.service
+```
