@@ -22,7 +22,7 @@ Original author: https://xpenology.com/forum/topic/14007-terramaster-f4-220-fan-
 3. Create a directory containing all the drives. I created a directory in ``/opt/disks/``  and just empty files inside (as root):
 ```
 mkdir /opt/disks
-cd /run/disks
+cd /opt/disks
 touch sda sdb sdc
 ```
 
